@@ -1,0 +1,22 @@
+import React from "react";
+import moment from "moment";
+
+const ProjectSumarry = ({ project }) => {
+  return (
+    <div className="card z-depth-0 project-summary">
+      <div className="card-content grey-text text-darken-3">
+        <span className="card-title">
+          <p className="blue-text">{project.title}</p>
+        </span>
+        <p>
+          Done by {project.FirstName} {project.LastName}
+        </p>
+        <p className="gery-text">
+          {moment(project.createAt.toDate().toString()).calendar()}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectSumarry;
